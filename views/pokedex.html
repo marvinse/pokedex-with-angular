@@ -1,0 +1,13 @@
+<div>
+	<h1>Pokedex</h1>
+	<h2>Showing {{pokemons.length}} pokemons</h2>
+	<div class="pokemon__pokedex">
+		<div class="pokemon__pokedex__screen">
+			<div ng-repeat="pokemon in pokemons">
+				<a href="#pokemon/{{pokemon.name | normalize }}">
+				<pokemon-name display="onlyname"></pokemon-name>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
