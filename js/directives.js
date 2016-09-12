@@ -15,6 +15,12 @@
 			}
 		}
 	})
+	.directive('pokemonButtons',function(){
+		return {
+			restrict: 'E',
+			templateUrl: 'partials/pokemon-buttons.html'
+		}
+	})
 	.directive('pokemonType',function(){
 		return {
 			restrict: 'E',

@@ -1,0 +1,9 @@
+<div class="info">
+	<a ng-class="{active : tabs.tab == 1}" ng-click="tabs.setTab(1)">Info</a>
+</div>
+<div class="stats">
+	<a ng-class="{active : tabs.tab == 2}" ng-click="tabs.setTab(2)">Stats</a>
+</div>
+<div ng-hide="pokemon.evolution.length == 0" class="evol">
+	<a ng-class="{active : tabs.tab == 3}" ng-click="tabs.setTab(3)">Evol</a>
+</div>

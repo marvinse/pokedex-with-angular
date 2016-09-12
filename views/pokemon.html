@@ -3,24 +3,27 @@
 		<div class="pokemon__pokedex">
 			<pokemon-name></pokemon-name>
 			<a class="go-home" href="#/">Go home</a>
+			<pokemon-buttons></pokemon-buttons>
+			<pokemon-type></pokemon-type>
 		</div>
-		
-		<!--<p ng-class="{active : tabs.tab == 1}"><a ng-click="tabs.setTab(1)">Pokedex</a></p>
-		<p ng-class="{active : tabs.tab == 2}"><a ng-click="tabs.setTab(2)">Stats</a></p>
-		<p ng-class="{active : tabs.tab == 3}"><a ng-click="tabs.setTab(3)">Evolutions</a></p>
-		<div class="pokedex" ng-show="tabs.tab === 1">-->
-		<pokemon-data></pokemon-data>
-	</div>
-	<div class="stats" ng-show="tabs.tab === 2">
-		<ul>
-			<li ng-repeat="(key, value) in pokemon.stats"><strong>{{key}}: </strong>{{value}}</li>
-		</ul>
-	</div>
-	<div class="evolutions"  ng-show="tabs.tab === 3">
-		<a ng-repeat="evolution in pokemon.evolution" href="#pokemon/{{evolution | normalize }}">
-			<img src="{{evolution | imageify}}" alt="">
-			<p><strong>{{evolution}}</strong></p>
-			<span ng-hide="$last">down</span>
-		</a>
+		<div class="pokedex" ng-show="tabs.tab === 1">
+			<pokemon-data></pokemon-data>
+		</div>
+		<div class="stats" ng-show="tabs.tab === 2">
+			<ul>
+				<li ng-repeat="(key, value) in pokemon.stats"><strong>{{key}}: </strong>{{value}}</li>
+			</ul>
+		</div>
+		<div class="evolutions"  ng-show="tabs.tab === 3">
+			<div class="evolution">
+				<div ng-repeat="evolution in pokemon.evolution">
+					<a href="#pokemon/{{evolution | normalize }}">
+						<p><strong>{{evolution}}</strong></p>
+						<img src="{{evolution | imageify}}" alt="">
+					</a>
+					<p><img class="down-arrow" src='img/arrow-down.png' ng-hide="$last" /></p>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
